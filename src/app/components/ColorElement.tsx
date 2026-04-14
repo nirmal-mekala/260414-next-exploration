@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ColorElement({
+export default async function ColorElement({
   children,
 }: {
   children?: React.ReactNode;
@@ -24,7 +24,13 @@ export default function ColorElement({
     "bg-pink-300",
     "bg-rose-300",
   ] as const;
-  const randomColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+  //  const randomColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+
+  const randomColor = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(bgColors[Math.floor(Math.random() * bgColors.length)]);
+    }, 1500);
+  });
   return (
     <>
       <p className={`${randomColor} text-black`}>{children}</p>
