@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default async function ColorElement({
   children,
 }: {
@@ -31,12 +29,5 @@ export default async function ColorElement({
       resolve(bgColors[Math.floor(Math.random() * bgColors.length)]);
     }, 1500);
   });
-  return (
-    <>
-      <p className={`${randomColor} text-black`}>{children}</p>
-      <p>
-        <Link href="/">Home</Link>
-      </p>
-    </>
-  );
+  return <p className={`${randomColor} text-black`}>{children}</p>;
 }

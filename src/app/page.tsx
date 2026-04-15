@@ -7,7 +7,7 @@ export default function Home() {
         <Link href="/static">Static Route</Link>
       </p>
       <p>
-        <Link href="/dynamic">Dynamic Route</Link>
+        <Link href="/dynamic-ssr">Dynamic SSR Route</Link>
       </p>
     </>
   );
