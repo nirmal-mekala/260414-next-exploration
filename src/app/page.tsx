@@ -14,6 +14,9 @@ export default function Home() {
           Dynamic SSR Route - No Suspense
         </Link>
       </p>
+      <p>
+        <Link href="/csr">CSR Route</Link>
+      </p>
     </>
   );
 }
