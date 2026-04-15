@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import ColorElementAsync from "../components/ColorElement";
+import ColorElementAsync from "../components/ColorElementAsync";
 
 export const dynamic = "force-static";
 
