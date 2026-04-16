@@ -1,4 +1,6 @@
 import { getColorCached } from "../../server/colors";
+import { expireColorCache } from "../actions";
+import ServerActionButtonRow from "./ServerActionButtonRow";
 
 export default async function ColorElementAsync({
   children,
@@ -9,6 +11,7 @@ export default async function ColorElementAsync({
   return (
     <>
       <p className={`${randomColor} text-black`}>{children}</p>
+      <ServerActionButtonRow label="Refresh" action={expireColorCache} />
     </>
   );
 }
