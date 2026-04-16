@@ -12,6 +12,9 @@ export default function Home() {
       <p>
         <Link href="/csr">CSR Route</Link>
       </p>
+      <p>
+        <Link href="/csr-cached">CSR Cached Route</Link>
+      </p>
     </>
   );
 }
