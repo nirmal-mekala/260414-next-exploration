@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <>
       <p>
-        <Link href="/dynamic-ssr">Dynamic SSR Route</Link>
+        <Link href="/ppr">Partial Prerender</Link>
       </p>
       <p>
-        <Link href="/dynamic-ssr-cached">Dynamic SSR Route - Cached</Link>
+        <Link href="/static">Static (Partial Prerender + Caching)</Link>
       </p>
       <p>
         <Link href="/csr">CSR Route</Link>
