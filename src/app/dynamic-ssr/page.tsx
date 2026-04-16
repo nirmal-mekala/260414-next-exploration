@@ -2,8 +2,6 @@ import Link from "next/link";
 import { Suspense } from "react";
 import ColorElementAsync from "../components/ColorElementAsync";
 
-export const dynamic = "force-dynamic";
-
 export default function DynamicSSR() {
   return (
     <>

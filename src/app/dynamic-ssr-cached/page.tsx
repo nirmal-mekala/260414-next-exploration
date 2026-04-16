@@ -1,14 +1,12 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import ColorElementAsync from "../components/ColorElementAsync";
+import ColorElementAsyncCached from "../components/ColorElementAsyncCached";
 
-export const dynamic = "force-static";
-
-export default function Static() {
+export default function DynamicSSRCached() {
   return (
     <>
       <Suspense fallback={<p>Loading</p>}>
-        <ColorElementAsync>Static</ColorElementAsync>
+        <ColorElementAsyncCached>Dynamic SSR Cached</ColorElementAsyncCached>
       </Suspense>
       <p>
         <Link href="/">Home</Link>

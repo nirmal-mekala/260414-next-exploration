@@ -1,4 +1,11 @@
 import "server-only";
+import { cacheLife } from "next/cache";
+
+export async function getColorCached() {
+  "use cache";
+  cacheLife("max");
+  return getColor();
+}
 
 export async function getColor() {
   const bgColors = [
@@ -20,8 +27,6 @@ export async function getColor() {
     "bg-pink-300",
     "bg-rose-300",
   ] as const;
-  //  const randomColor = bgColors[Math.floor(Math.random() * bgColors.length)];
-
   const randomColor = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(bgColors[Math.floor(Math.random() * bgColors.length)]);
