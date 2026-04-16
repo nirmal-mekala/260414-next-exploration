@@ -7,7 +7,7 @@ export default function ColorElement({
 }: {
   children?: React.ReactNode;
 }) {
-  const { data, isLoading } = useQuery({
+  const { data, isFetching } = useQuery({
     queryKey: ["color"],
     queryFn: async () => {
       const res = await fetch("/api/colors");
@@ -16,7 +16,7 @@ export default function ColorElement({
     },
   });
 
-  if (isLoading) {
+  if (isFetching) {
     return <p>Loading</p>;
   }
 

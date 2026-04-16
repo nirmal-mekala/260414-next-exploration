@@ -6,8 +6,6 @@ import ColorElement from "../components/ColorElement";
 
 // TODO -- code blocks
 // TODO -- layouts (Home)
-// TODO keep? need better understanding of how dynamic/static works vs. client/server components
-export const dynamic = "force-dynamic";
 
 const queryClient = new QueryClient();
 export default function CSR() {
