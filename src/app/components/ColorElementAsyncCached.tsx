@@ -6,5 +6,9 @@ export default async function ColorElementAsync({
   children?: React.ReactNode;
 }) {
   const randomColor = await getColorCached();
-  return <p className={`${randomColor} text-black`}>{children}</p>;
+  return (
+    <>
+      <p className={`${randomColor} text-black`}>{children}</p>
+    </>
+  );
 }

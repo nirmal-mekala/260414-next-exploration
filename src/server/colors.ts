@@ -1,9 +1,10 @@
 import "server-only";
-import { cacheLife } from "next/cache";
+import { cacheLife, cacheTag } from "next/cache";
 
 export async function getColorCached() {
   "use cache";
   cacheLife("max");
+  cacheTag("colors");
   return getColor();
 }
 
