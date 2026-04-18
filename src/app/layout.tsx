@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
 import { PreloadResources } from "./preload-resources";
 
 export const metadata: Metadata = {
@@ -21,6 +22,9 @@ export default function RootLayout({
         <div id="page">
           <main>
             <PreloadResources />
+            <p>
+              <Link href="/">Home</Link>
+            </p>
             {children}
           </main>
         </div>
